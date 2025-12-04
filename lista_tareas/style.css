@@ -1,0 +1,64 @@
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #3e5eec, #24b8d2);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    width: 90%;
+    max-width: 500px;
+}
+h1 { text-align: center; margin-bottom: 30px; color: #333; }
+.input-box {
+    display: flex;
+    margin-bottom: 20px;
+}
+#nueva-tarea {
+    flex: 1;
+    padding: 15px;
+    font-size: 1.1rem;
+    border: 2px solid #ddd;
+    border-radius: 10px 0 0 10px;
+}
+#agregar {
+    padding: 15px 25px;
+    font-size: 1.5rem;
+    background: #2948cf;
+    color: white;
+    border: none;
+    border-radius: 0 10px 10px 0;
+    cursor: pointer;
+}
+#lista {
+    list-style: none;
+}
+#lista li {
+    background: #f8f9fa;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s;
+}
+#lista li.completada {
+    text-decoration: line-through;
+    opacity: 0.6;
+    background: #e9ecef;
+}
+.borrar {
+    background: #e74c3c;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 50%;
+    cursor: pointer;
+}
