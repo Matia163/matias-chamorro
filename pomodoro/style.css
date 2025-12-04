@@ -1,0 +1,86 @@
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+    font-family: 'Segoe UI', sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0f0f1e, #1a1a2e);
+    color: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s;
+}
+body.light {
+    background: linear-gradient(135deg, #8599f3, #5c58c6);
+    color: #333;
+}
+
+.container { width: 100%; padding: 20px; }
+.card {
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 30px;
+    padding: 40px 30px;
+    max-width: 420px;
+    margin: 0 auto;
+    text-align: center;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+    border: 1px solid rgba(255,255,255,0.1);
+}
+h1 { font-size: 3rem; margin-bottom: 30px; background: linear-gradient(90deg, #ff6b6b, #4ecdc4); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+
+.modes { display: flex; gap: 15px; justify-content: center; margin-bottom: 40px; flex-wrap: wrap; }
+.mode {
+    padding: 12px 24px;
+    background: rgba(255,255,255,0.1);
+    border: none;
+    border-radius: 50px;
+    color: #eee;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.mode.active, .mode:hover { background: #ff6b6b; transform: translateY(-3px); }
+
+.timer { position: relative; margin: 40px 0; }
+.progress-ring { transform: rotate(-90deg); }
+.ring-bg { stroke: rgba(255,255,255,0.1); stroke-width: 12; fill: none; }
+.ring-progress { stroke: #4ecdc4; stroke-width: 12; fill: none; stroke-linecap: round; transition: stroke-dashoffset 1s linear; }
+.time-display {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4.5rem;
+    font-weight: bold;
+}
+
+.controls button {
+    padding: 15px 35px;
+    margin: 10px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    background: #ff6b6b;
+    color: white;
+    transition: all 0.3s;
+}
+.controls button:hover { transform: scale(1.05); }
+.hidden { display: none; }
+
+.stats { margin-top: 30px; font-size: 1.2rem; opacity: 0.8; }
+#theme-toggle {
+    margin-top: 30px;
+    padding: 12px 25px;
+    background: rgba(255,255,255,0.15);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .card { padding: 30px 20px; }
+    .time-display { font-size: 3.5rem; }
+    .progress-ring { width: 250px; height: 250px; }
+    circle { r: 115; }
+}
