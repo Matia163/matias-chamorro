@@ -99,54 +99,42 @@ h1 { text-align: center; color: white; margin-bottom: 30px; font-size: 2.5rem; }
 #prev { left: 20px; }
 #next { right: 20px; }
 
-/* Responsive */
-@media (max-width: 768px) {
-    .filtros { justify-content: center; flex-direction: column; align-items: center; }
-    .grid { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; }
-}
-
-/* MÓVIL – Funciona en absolutamente todos los celulares */
-@media (max-width: 768px) {
-    h1 { font-size: 2rem; }
-
+/* MÓVIL – FORZADO para que funcione en cualquier celular */
+@media (max-width: 1024px) {
     .filtros {
-        flex-wrap: nowrap;
-        overflow-x: auto;
-        justify-content: flex-start;
-        padding: 15px 10px;
-        margin-bottom: 25px;
-        gap: 12px;
-        -webkit-overflow-scrolling: touch;
-        scrollbar-width: none;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        overflow-x: auto !important;
+        justify-content: flex-start !important;
+        padding: 15px 10px !important;
+        gap: 12px !important;
+        -webkit-overflow-scrolling: touch !important;
+        scrollbar-width: none !important;
     }
-    .filtros::-webkit-scrollbar { display: none; }
+    .filtros::-webkit-scrollbar { display: none !important; }
 
     .filtro {
-        flex: 0 0 auto;
-        min-width: 110px;
-        padding: 12px 18px;
-        border-radius: 30px;
-        background: rgba(255,255,255,0.25);
-        backdrop-filter: blur(12px);
-        -webkit-backdrop-filter: blur(12px);
-        border: 1px solid rgba(255,255,255,0.2);
-        font-weight: 600;
-        transition: all 0.3s;
+        flex: 0 0 auto !important;
+        min-width: 120px !important;
+        padding: 14px 20px !important;
+        border-radius: 30px !important;
+        background: rgba(255,255,255,0.3) !important;
+        backdrop-filter: blur(12px) !important;
+        -webkit-backdrop-filter: blur(12px) !important;
+        border: 1px solid rgba(255,255,255,0.3) !important;
+        font-weight: 600 !important;
+        white-space: nowrap !important;
     }
     .filtro.activo {
-        background: white;
-        color: #667eea;
-        transform: scale(1.08);
-        box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+        background: white !important;
+        color: #667eea !important;
+        transform: scale(1.1) !important;
+        box-shadow: 0 8px 30px rgba(0,0,0,0.3) !important;
     }
 
     .grid {
-        grid-template-columns: 1fr;
-        gap: 25px;
-        padding: 0 15px;
-    }
-    .imagen img {
-        height: 300px;
-        object-fit: cover;
+        grid-template-columns: 1fr !important;
+        gap: 25px !important;
+        padding: 0 15px !important;
     }
 }
