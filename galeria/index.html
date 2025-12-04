@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería de Imágenes - Matías</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Mi Galería</h1>
+        
+        <!-- Filtros -->
+        <div class="filtros">
+            <button class="filtro activo" data-filtro="todos">Todos</button>
+            <button class="filtro" data-filtro="paisajes">Paisajes</button>
+            <button class="filtro" data-filtro="retratos">Retratos</button>
+            <button class="filtro" data-filtro="naturaleza">Naturaleza</button>
+            <button class="filtro" data-filtro="codigo">Código/Tech</button>
+        </div>
+        
+        <!-- Grid de imágenes -->
+        <div class="grid" id="grid">
+            <!-- Las imágenes se generan con JS -->
+        </div>
+    </div>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <span class="cerrar">&times;</span>
+        <img id="lightbox-img" src="" alt="">
+        <button id="prev">&lt;</button>
+        <button id="next">&gt;</button>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
